@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socratic Teaching Assistant</title>
+    <link rel="stylesheet" href="../static/css/style.css" type="text/css" media="screen"/>
+</head>
+<body>
+
+<div class="container">
+    <h1>Socratic Teaching Assistant</h1>
+    <p>Ask a technical question, and the assistant will guide you using the Socratic method.</p>
+    
+    <input type="text" id="query" placeholder="Enter your question here...">
+    <button type="button" onclick="getResponse()">Submit</button>
+
+    <div id="response-container" class="response-container"></div>
+</div>
+
+<script>
+    async function getResponse() {
+        const query = document.getElementById('query').value;
+        const responseContainer = document.getElementById('response-container');
+
+        // Prevent submission if input is empty
+        if (!query.trim()) {
+            alert("Please enter a question!");
+            return;
+        }
+
+        const response = await fetch('/get_response', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ query: query })
+        });
+
+        const data = await response.json();
+
+        // Append the new response to the response container
+        responseContainer.innerHTML += data.response; // Using += to append
+    }
+</script>
+
+</body>
+</html>

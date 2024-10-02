@@ -1,0 +1,73 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4; /* Soft background */
+    color: #333;
+    line-height: 1.6; /* Improved readability */
+}
+
+.container {
+    max-width: 600px; /* Centering the container */
+    margin: auto;
+    background: white; /* Clean white background */
+    padding: 30px; /* Increased padding for a more spacious feel */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    border-radius: 10px; /* Rounded corners */
+}
+
+h1 {
+    font-size: 28px; /* Larger, inviting title */
+    color: #28a745; /* Main theme color */
+    text-align: center; /* Centered title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+p {
+    font-size: 16px; /* Readable paragraph font */
+    text-align: center; /* Centered text */
+    margin-bottom: 20px; /* Space below the paragraph */
+}
+
+input[type=text], textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Comfortable padding */
+    margin: 10px 0; /* Space above and below */
+    border: 1px solid #ccc; /* Subtle border */
+    border-radius: 5px; /* Rounded edges */
+    font-size: 16px; /* Larger font size for readability */
+}
+
+button {
+    padding: 12px 20px; /* Comfortable button padding */
+    background-color: #28a745; /* Primary button color */
+    border: none; /* No border */
+    color: white; /* White text */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 16px; /* Larger font size */
+    transition: background-color 0.3s ease; /* Smooth background change */
+    width: 100%; /* Full width for buttons */
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.response-container {
+    margin-top: 20px; /* Space above response section */
+}
+
+.response-item {
+    margin-bottom: 20px; /* Space between responses */
+    padding: 15px; /* Comfortable padding */
+    background-color: #e9ecef; /* Light grey background */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+hr {
+    border: 0; /* No border */
+    height: 1px; /* Height for the line */
+    background: #ccc; /* Grey line */
+    margin: 20px 0; /* Space above and below */
+}

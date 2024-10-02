@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socratic Teaching Assistant</title>
+    <link rel="stylesheet" href="../static/css/about.css" type="text/css" media="screen"/>
+</head>
+<body>
+    <div class="hamburger" onclick="toggleNavbar()">
+        &#9776; <!-- Hamburger icon -->
+    </div>
+
+    <div class="navbar" id="navbar">
+        <a href="#home">Home</a>
+        <a href="#whyChooseUs">Why Choose Us?</a>
+        <a href="#howItWorks">How It Works</a>
+    </div>
+
+    <div class="toTheTopRight">
+        <a href="/getStarted"><button>Get Started</button></a>
+    </div>
+
+    <div class="nav_element" id="home">
+        <h1>Revolutionizing Learning with AI-Powered Socratic Teaching</h1>
+        <p class="intro">Imagine having a personalized teaching assistant that guides you through a series of thought-provoking questions, rather than simply providing answers. Our innovative application leverages the power of Gen AI to create a tailored learning experience, inspired by the timeless Socratic method.</p>
+        <img src="/heroImage" alt="AI Learning" class="hero-image">
+    </div>
+
+    <div class="nav_element" id="whyChooseUs">
+        <h2>Engage with Probing Questions</h2>
+        <p class="info">Instead of simply providing answers, our assistant employs the Socratic method, asking thoughtful questions that encourage critical thinking. For example, if you encounter a timeout error during your sorting algorithm tests, the assistant might prompt you with, “What can you tell me about the difference between this test case and the others that succeeded?” This approach not only leads you to the answer but deepens your understanding of the underlying concepts.</p>
+
+        <h2>Tailored Learning Experience</h2>
+        <p class="info">Whether you're a budding programmer or an experienced software engineer, our adaptive questioning technique meets you at your level. You’ll receive personalized guidance based on your responses, ensuring a unique and effective learning experience that evolves with you.</p>
+
+        <h2>Learn by Doing</h2>
+        <p class="info">Through interactive scenarios, you'll apply what you learn in real-time. The assistant helps you identify inefficiencies in your code, understand complexity, and optimize your solutions—all through a conversational learning process.</p>
+    </div>
+
+    <div class="nav_element" id="howItWorks">
+        <h2>How It Works</h2>
+        <ul>
+            <li>Initial Question: The assistant presents a problem or test case and asks an initial question to spark your thinking.</li>
+            <li>Student Response: You provide an answer, and the assistant analyzes it to identify areas for further exploration.</li>
+            <li>Follow-up Questions: The assistant asks targeted questions based on your response, guiding you towards the solution.</li>
+            <li>Iterative Learning: Through this back-and-forth dialogue, you'll arrive at the answer, with the assistant providing subtle hints and nudges along the way.</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleNavbar() {
+            const navbar = document.getElementById("navbar");
+            navbar.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
