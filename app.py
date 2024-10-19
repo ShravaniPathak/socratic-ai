@@ -1,13 +1,18 @@
+import os
 from flask import Flask, request, jsonify, render_template
 import google.generativeai as genai
 from flask import send_file
-import os
+from dotenv import load_dotenv
 
+load_dotenv()  # Load environment variables from .env file
 
 app = Flask(__name__)
 
+# Access the API key
+GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
+
 # Configure the Gemini API with your API key
-genai.configure(api_key='AIzaSyC-TJVsKvbOo1ZO6Bf4c6CdG1cR1VPcGHU')
+genai.configure(api_key=GOOGLE_API_KEY)
 
 # Define the model
 model = genai.GenerativeModel('gemini-1.5-pro')
@@ -52,7 +57,7 @@ def get_started():
 
 @app.route('/heroImage')
 def heroImage():
-    return send_file('templates/hero image.png', mimetype='image/png')  # Adjust path as necessary
+    return send_file('templates/hero image.png', mimetype='image/png')
 
 
 @app.route('/get_response', methods=['POST'])
