@@ -4,8 +4,6 @@
 
 The **Socratic Teaching Assistant** is a Gen AI-powered tool designed to enhance the learning experience of students by employing the **Socratic method**. This approach encourages critical thinking through probing questions, rather than simply providing answers. The tool focuses specifically on teaching **Data Structures and Algorithms**, making it a valuable resource for students and software engineers alike.
 
-Check the website out at : https://socratic-teaching-assistant.onrender.com/
-
 ## **Problem Statement**
 
 The traditional Socratic method, while effective, faces challenges in scaling for broader educational purposes. This project seeks to overcome those challenges by leveraging AI technology to facilitate a personalized learning experience. By focusing on a specific topic—**Algorithms of Sorting**—our assistant will guide users through the thought process, asking questions to help them arrive at answers independently.
