@@ -40,7 +40,7 @@
         const data = await response.json();
 
         // Append the new response to the response container
-        responseContainer.innerHTML += data.response; // Using += to append
+        responseContainer.innerHTML = data.response + responseContainer.innerHTML; 
     }
 </script>
 

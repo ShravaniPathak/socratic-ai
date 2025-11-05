@@ -4,26 +4,35 @@ import google.generativeai as genai
 from flask import send_file
 from dotenv import load_dotenv
 
-load_dotenv()  # Load environment variables from .env file
+load_dotenv()  
+print("Dotenv working")
 
 app = Flask(__name__)
 
-# Access the API key
 GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
+print("Api key accessed")
 
-# Configure the Gemini API with your API key
 genai.configure(api_key=GOOGLE_API_KEY)
 
-# Define the model
-model = genai.GenerativeModel('gemini-1.5-pro')
+model = genai.GenerativeModel("models/gemma-3-27b-it")
+# print(model)
+
+chat = model.start_chat(history=[])
 
 def generate_socratic_response(query):
-    instruction = "Answer using the Socratic method"
-    response = model.generate_content(query + instruction)
+    instruction = "Answer using the Socratic method."
+    message = f"{query}\n\n{instruction}"
+
+    # Send message to Gemini within this chat session
+    response = chat.send_message(message)
+
+    # You can inspect chat.history to see the stored messages
+    print(chat.history)
 
     if not response or not response.text:
         return "<div class='response-item'>Sorry, I couldn't generate a response. Please try again.</div>"
 
+    print (response)
     beautified_response = "<div class='response-item'>"
     beautified_response += f"<h3>Response for: {query}</h3>"
     
