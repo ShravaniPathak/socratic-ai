@@ -23,10 +23,8 @@ def generate_socratic_response(query):
     instruction = "Answer using the Socratic method."
     message = f"{query}\n\n{instruction}"
 
-    # Send message to Gemini within this chat session
     response = chat.send_message(message)
 
-    # You can inspect chat.history to see the stored messages
     print(chat.history)
 
     if not response or not response.text:
