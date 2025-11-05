@@ -1,4 +1,5 @@
 # **Socratic Teaching Assistant**
+Visit the assistant at : https://visiting-emili-mitadt-9c0bf939.koyeb.app/
 
 ## **Project Overview**
 
